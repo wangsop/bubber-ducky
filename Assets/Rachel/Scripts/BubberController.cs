@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BubberController : MonoBehaviour
@@ -11,28 +10,60 @@ public class BubberController : MonoBehaviour
     private int slowCount;
     private Vector3 ogVel;
 
+    [Header("Jump")]
+    [SerializeField] private float jumpForce;
+    [SerializeField] private float fallMultiplier;
+    [SerializeField] private LayerMask groundLayer;
+    private float bubberHeight;
+    private bool isGrounded;
+    private bool canJump;
+
+    [Header("Mesh")]
+    [SerializeField] private Transform meshTransform;
+
+    private float horizontalInput;
+
     private Rigidbody rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
         speedScale = 1f;
         slowCount = 0;
         ogVel = Vector3.zero;
+
+        bubberHeight = GetComponent<CapsuleCollider>().radius;
+
+        horizontalInput = 0f;
     }
 
     private void Update()
     {
+        CheckInput();
         CapSpeed();
-        CheckSlow();
+        AlignMesh();
     }
 
     private void FixedUpdate()
     {
         Move();
+        CheckSlow();
+        CheckGround();
+        Jump();
     }
 
-    #region Movement
+    private void CheckInput()
+    {
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            canJump = true;
+        }
+    }
+
+    #region Move
     private void Move()
     {
         // forward movement
@@ -40,9 +71,9 @@ public class BubberController : MonoBehaviour
 
         // sideways movement
         Vector3 sidewaysDir = Vector3.zero;
-        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f)
+        if (Mathf.Abs(horizontalInput) > 0.5f)
         {
-            sidewaysDir = 35f * Input.GetAxisRaw("Horizontal") * transform.right;
+            sidewaysDir = 50f * horizontalInput * transform.right;
         }
 
         rb.AddForce(20f * speed * (forwardDir + sidewaysDir).normalized, ForceMode.Force);
@@ -58,6 +89,43 @@ public class BubberController : MonoBehaviour
             rb.velocity = new(cappedVel.x, rb.velocity.y, cappedVel.z);
         }
     }
+    #endregion
+
+    #region Jump
+    private void CheckGround()
+    {
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, bubberHeight + 0.5f, groundLayer);
+
+        if (!isGrounded) {
+            rb.velocity += new Vector3(0f, -fallMultiplier, 0f);
+        }
+    }
+
+    private void Jump()
+    {
+        if (isGrounded && canJump)
+        {
+            canJump = false;
+            rb.AddForce(20f * jumpForce * meshTransform.up, ForceMode.Impulse);
+        }
+    }
+
+    private Vector3 refVel = Vector3.zero;
+    private void AlignMesh()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, Mathf.Infinity, groundLayer))
+        {
+            meshTransform.up = Vector3.SmoothDamp(meshTransform.up, hit.normal, ref refVel, 0.35f);
+        }
+    }
+    #endregion
+
+    #region Slow
+    public void Slow(float slowMultiplier)
+    {
+        speedScale = 1f - slowMultiplier;
+        StartCoroutine(ISlow());
+    }
 
     private void CheckSlow()
     {
@@ -69,14 +137,6 @@ public class BubberController : MonoBehaviour
         }
 
         rb.velocity = new(rb.velocity.x, rb.velocity.y, ogVel.z * speedScale);
-    }
-    #endregion
-
-    #region Slow
-    public void Slow(float slowMultiplier)
-    {
-        speedScale = 1f - slowMultiplier;
-        StartCoroutine(ISlow());
     }
 
     IEnumerator ISlow()
