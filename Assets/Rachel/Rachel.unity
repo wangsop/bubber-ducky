@@ -303,8 +303,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305211356}
-  - component: {fileID: 305211355}
   - component: {fileID: 305211354}
+  - component: {fileID: 305211357}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -326,20 +326,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTrack: {fileID: 1824220232}
   player: {fileID: 1944148763}
---- !u!114 &305211355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305211353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e5969c98b6424e8e90c288fc2dc777e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTrack: {fileID: 0}
-  player: {fileID: 0}
 --- !u!4 &305211356
 Transform:
   m_ObjectHideFlags: 0
@@ -355,6 +341,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305211357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305211353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae97963b7dae647eda3df3efde55d102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &536127614
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,9 +723,81 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 286456587383945629, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 397.0541
+      objectReference: {fileID: 0}
+    - target: {fileID: 286456587383945629, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 115.1736
+      objectReference: {fileID: 0}
+    - target: {fileID: 286456587383945629, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999905
+      objectReference: {fileID: 0}
+    - target: {fileID: 286456587383945629, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286456587383945629, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.004363368
+      objectReference: {fileID: 0}
+    - target: {fileID: 286456587383945629, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -221.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 286456587383945629, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 218.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 286456587383945629, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 286456587383945629, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1276702873853663927, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
       propertyPath: m_Name
       value: UI Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546980775927080018, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_text
+      value: x 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546980775927080018, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546980775927080018, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_margin.w
+      value: 60.57312
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546980775927080018, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_margin.z
+      value: 276.18445
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546980775927080018, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e8e6b232f0d642af9d6f919abf49595, type: 2}
+    - target: {fileID: 3546980775927080018, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546980775927080018, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3546980775927080018, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6567122625671255567, guid: 4e8e6b232f0d642af9d6f919abf49595, type: 2}
+    - target: {fileID: 3546980775927080018, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7047943987283504387, guid: bbbe7886b2fb54881860847f19f38cd2, type: 3}
       propertyPath: m_Pivot.x
