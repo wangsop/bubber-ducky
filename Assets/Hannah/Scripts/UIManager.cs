@@ -15,8 +15,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         duckInitPosition = new Vector3(duckIcon.transform.position.x, duckIcon.transform.position.y, duckIcon.transform.position.z);
-        duckFinalPosition = new Vector3(duckIcon.transform.position.x, progressBarMask.transform.position.y, duckIcon.transform.position.z);
-        Debug.Log(duckFinalPosition);
+        duckFinalPosition = new Vector3(duckIcon.transform.position.x, progressBarMask.GetComponent<RectTransform>().rect.height, duckIcon.transform.position.z);
     }
 
     // Update is called once per frame
@@ -24,7 +23,7 @@ public class UIManager : MonoBehaviour
     {
         bubbleText.text = "x " + BubbleCountScript.getNumBubbles();
         progressBarMask.fillAmount = Globals.percentageComplete;
-        if (duckIcon.transform.position.y > duckFinalPosition.y)
+        if (duckIcon.transform.position.y < duckFinalPosition.y)
         {
             duckIcon.gameObject.transform.position = duckInitPosition + ((duckFinalPosition - duckInitPosition) * Globals.percentageComplete);
         }
