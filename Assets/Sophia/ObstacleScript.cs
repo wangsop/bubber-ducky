@@ -10,6 +10,5 @@ public class ObstacleScript : MonoBehaviour
     {
         BubbleCountScript.loseBubble();
         Destroy(gameObject);
-        //PlayerController.Slow();
     }
 }
