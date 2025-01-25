@@ -38,7 +38,8 @@ public class PauseScript : MonoBehaviour
         {
             obs.SetActive(true);
         }
-        //insert UI update
+        pauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
     public void ExitToHome()
     {
