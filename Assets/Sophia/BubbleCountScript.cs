@@ -16,7 +16,7 @@ public class BubbleCountScript : MonoBehaviour
     {
         if (numBubbles == 0)
         {
-            //send to lose screen
+            Globals.lose();
         }
     }
 
@@ -33,5 +33,4 @@ public class BubbleCountScript : MonoBehaviour
     {
         return numBubbles;
     }
-
 }
