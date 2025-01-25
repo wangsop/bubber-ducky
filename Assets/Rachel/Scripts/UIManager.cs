@@ -16,7 +16,6 @@ public class UIManager : MonoBehaviour
     {
         duckInitPosition = new Vector3(duckIcon.transform.position.x, duckIcon.transform.position.y, duckIcon.transform.position.z);
         duckFinalPosition = new Vector3(duckIcon.transform.position.x, progressBarMask.transform.position.y, duckIcon.transform.position.z);
-        Debug.Log(duckFinalPosition);
     }
 
     // Update is called once per frame
