@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BubbleCountScript : MonoBehaviour
 {
-    [SerializeField] public int numBubbles;
+    [SerializeField] public static int numBubbles;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,17 +20,18 @@ public class BubbleCountScript : MonoBehaviour
         }
     }
 
-    public void addBubble()
+    public static void addBubble()
     {
         numBubbles++;
     }
 
-    public void loseBubble()
+    public static void loseBubble()
     {
         numBubbles--;
     }
-    public int getNumBubbles()
+    public static int getNumBubbles()
     {
         return numBubbles;
     }
+
 }
