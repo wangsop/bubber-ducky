@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class BubbleHitScript : MonoBehaviour
 {
-    [SerializeField] BubbleCountScript bcs;
+
+    private SphereCollider sc;
+    // Start is called before the first frame update
+    void Start()
+    {
+        sc = this.GetComponent<SphereCollider>();
+    }
 
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        bcs.addBubble();
+        BubbleCountScript.addBubble();
         Destroy(gameObject);
     }
 }
