@@ -8,7 +8,10 @@ public class BubbleHitScript : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        BubbleCountScript.addBubble();
-        Destroy(gameObject);
+        if (other.TryGetComponent<BubberController>(out BubberController bubber))
+        {
+            BubbleCountScript.addBubble();
+            Destroy(gameObject);
+        }
     }
 }
