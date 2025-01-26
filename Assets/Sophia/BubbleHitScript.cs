@@ -13,7 +13,7 @@ public class BubbleHitScript : MonoBehaviour
         if (other.TryGetComponent<BubberController>(out BubberController bubber))
         {
             BubbleCountScript.addBubble();
-            bubbleCounter.Pulse();
+            bubbleCounter?.Pulse();
             gameObject.SetActive(false);
         }
     }
