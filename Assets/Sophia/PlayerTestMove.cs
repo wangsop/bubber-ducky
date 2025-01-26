@@ -10,6 +10,9 @@ public class PlayerTestMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, bubble.transform.position, Time.deltaTime);
+        if (!Globals.introOccurring && !Globals.isRestart)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, bubble.transform.position, Time.deltaTime);
+        }
     }
 }

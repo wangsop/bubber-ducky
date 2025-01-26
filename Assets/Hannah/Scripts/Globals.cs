@@ -8,7 +8,10 @@ public class Globals : MonoBehaviour
     public GameObject player;
     public static Vector3 playerStartingPosition;
     public static float percentageComplete;
-    public static int numBubblesNeeded = 12; 
+    public static int numBubblesNeeded = 12;
+    public static bool introOccurring = true;
+    public static bool isRestart = false;
+
     // Start is called before the first frame update
     void Start()
     {
