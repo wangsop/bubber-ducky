@@ -51,7 +51,6 @@ public class PauseScript : MonoBehaviour
     }
     public void PlayAgain()
     {
-        //set scene to level scene
-        //Restart();
+        SceneManager.LoadScene("LevelOne");
     }
 }
