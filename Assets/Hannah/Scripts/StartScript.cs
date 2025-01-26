@@ -19,7 +19,7 @@ public class StartScript : MonoBehaviour
 
     public void OnClick()
     {
-        SceneManager.LoadScene("Hannah");
+        SceneManager.LoadScene("LevelOne");
     }
 
     public void OnHover()
