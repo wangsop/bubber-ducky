@@ -6,6 +6,9 @@ public class FallScript : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Globals.lose();
+        if (other.TryGetComponent<BubberController>(out BubberController bubber))
+        {
+            Globals.lose();
+        }
     }
 }

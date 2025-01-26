@@ -609,8 +609,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1357587937}
-        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
-        m_MethodName: ExitToHome
+        m_TargetAssemblyTypeName: WinLoseScript, Assembly-CSharp
+        m_MethodName: Home
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -619,7 +619,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &433061979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,11 +1070,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1357587933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be9c8813dda324be1b6bcb92c5417dea, type: 3}
+  m_Script: {fileID: 11500000, guid: 5311cbbb43d9f4d7f99caa9f87e97026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
-  player: {fileID: 0}
 --- !u!1 &1469713033
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,8 +1157,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1357587937}
-        m_TargetAssemblyTypeName: PauseScript, Assembly-CSharp
-        m_MethodName: PlayAgain
+        m_TargetAssemblyTypeName: WinLoseScript, Assembly-CSharp
+        m_MethodName: TryAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1169,7 +1167,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1469713036
 MonoBehaviour:
   m_ObjectHideFlags: 0
