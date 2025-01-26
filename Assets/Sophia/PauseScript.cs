@@ -45,4 +45,9 @@ public class PauseScript : MonoBehaviour
     {
         //set scene to home screen
     }
+    public void PlayAgain()
+    {
+        //set scene to level scene
+        //Restart();
+    }
 }
