@@ -19,7 +19,7 @@ public class StartScript : MonoBehaviour
 
     public void OnClick()
     {
-        SceneManager.LoadScene("LevelOne");
+        SceneManager.LoadScene("CurveLevelOne");
     }
 
     public void OnHover()
