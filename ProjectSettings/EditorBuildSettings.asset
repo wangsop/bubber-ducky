@@ -14,8 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hannah/Hannah.unity
     guid: 6604e015eeceb41ac94c283461d591ee
-  - enabled: 1
-    path: Assets/Sophia/LevelOne.unity
+  - enabled: 0
+    path: Assets/Sophia/Draft2LevelOne.unity
     guid: 35feae2395e8944a4b5bd3c4202eb3ef
   - enabled: 1
     path: Assets/Sophia/LoseScene.unity
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hannah/CurveLevelOne.unity
     guid: fc53592bb4f454e938971ccbcecced3e
+  - enabled: 1
+    path: Assets/Sophia/LevelOne.unity
+    guid: 128067631243f47d2b4d85c0cd49d8f5
   m_configObjects: {}
