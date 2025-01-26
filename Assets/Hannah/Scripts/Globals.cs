@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Globals : MonoBehaviour
 {
@@ -28,12 +29,10 @@ public class Globals : MonoBehaviour
 
     public static void win()
     {
-        //change to win screen, stuff
-        Debug.Log("You win");
+        SceneManager.LoadScene("WinScene");
     }
     public static void lose()
     {
-        //lose stuff
-        Debug.Log("You lose");
+        SceneManager.LoadScene("LoseScene");
     }
 }
