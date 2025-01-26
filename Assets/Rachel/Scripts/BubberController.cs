@@ -47,11 +47,11 @@ public class BubberController : MonoBehaviour
     private void OnDisable()
     {
         EnterIdleState();
+        EnableCursor();
     }
 
     private void Update()
     {
-        //Debug.Log(state);
         if (state == BubberState.PLAY)
         {
             CheckInput();
@@ -59,6 +59,7 @@ public class BubberController : MonoBehaviour
         }
 
         AlignMesh();
+
         if (Globals.introOccurring || Globals.isRestart)
         {
             EnterIdleState();
@@ -67,7 +68,6 @@ public class BubberController : MonoBehaviour
         {
             EnterPlayState();
         }
-                
     }
 
     private void FixedUpdate()
@@ -181,6 +181,10 @@ public class BubberController : MonoBehaviour
     #region States
     public void EnterPlayState()
     {
+        if (Time.timeScale != 0f)
+        {
+            DisableCursor();
+        }
         state = BubberState.PLAY;
     }
 
@@ -188,6 +192,19 @@ public class BubberController : MonoBehaviour
     {
         state = BubberState.IDLE;
         rb.velocity = Vector3.zero;
+        EnableCursor();
+    }
+
+    private void EnableCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void DisableCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     #endregion
 }
