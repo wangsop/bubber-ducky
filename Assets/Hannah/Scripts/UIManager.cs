@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour
     public Camera normalCamera;
 
     public AudioSource talkingAudio;
+    public AudioSource levelAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -104,6 +105,7 @@ public class UIManager : MonoBehaviour
             dialogueObject.SetActive(false);
             bubbleCounter.SetActive(true);
             progressBar.SetActive(true);
+            levelAudio.Play();
         }
         
     }
