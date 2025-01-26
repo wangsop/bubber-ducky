@@ -9,7 +9,7 @@ public class Globals : MonoBehaviour
     public GameObject player;
     public static Vector3 playerStartingPosition;
     public static float percentageComplete;
-    public static int numBubblesNeeded = 12;
+    public static int numBubblesNeeded = 8;
     public static bool introOccurring;
     public static bool isRestart;
     public static string currentScene;
