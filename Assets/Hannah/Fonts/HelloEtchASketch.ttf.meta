@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b5a63fa7ff6c6453c851cc6305db7107
+guid: 772734f490ad64fcf830b1dd7145cefe
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Super Pencil
+  - HelloEtchASketch
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
