@@ -5,6 +5,9 @@ public class PauseScript : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject player;
+
+    public AudioSource levelAudio;
+
     private GameObject[] bubbles;
     private GameObject[] obstacles;
 
@@ -26,6 +29,7 @@ public class PauseScript : MonoBehaviour
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
+        levelAudio.Pause();
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -33,6 +37,7 @@ public class PauseScript : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        levelAudio.Play();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -42,6 +47,7 @@ public class PauseScript : MonoBehaviour
         player.transform.position = Globals.playerStartingPosition;
         Globals.introOccurring = true;
         Globals.isRestart = true;
+        levelAudio.Stop();
         Globals.percentageComplete = 0f;
         BubbleCountScript.numBubbles = 3;
 
