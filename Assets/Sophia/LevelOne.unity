@@ -10526,6 +10526,42 @@ PrefabInstance:
       propertyPath: mainLevelAudio
       value: 
       objectReference: {fileID: 1864774860}
+    - target: {fileID: 6568784980613511365, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
+      propertyPath: dialogue.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568784980613511365, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: There's been an oil spill!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568784980613511365, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: Baby ducks are in danger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568784980613511365, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: Go forth and save them!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568784980613511365, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: Collect 8 bubbles
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568784980613511365, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: To cleanse the baby ducklings
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568784980613511365, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
+      propertyPath: dialogue.Array.data[5]
+      value: (Not sponsored by Dawn)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568784980613511365, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
+      propertyPath: dialogue.Array.data[6]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6568784980613511365, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
+      propertyPath: dialogue.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6960668242334467800, guid: e228d61aaeac04ef78937212dc31e140, type: 3}
       propertyPath: m_IsActive
       value: 1
