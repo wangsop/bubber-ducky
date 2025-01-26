@@ -1298,6 +1298,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 637711341954098284, guid: 6b4fb088a5b52eb428bae05be3745edd, type: 3}
+      propertyPath: m_Center.y
+      value: 0.57
+      objectReference: {fileID: 0}
     - target: {fileID: 649820899285119905, guid: 6b4fb088a5b52eb428bae05be3745edd, type: 3}
       propertyPath: m_ClearFlags
       value: 1
