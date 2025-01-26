@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 772734f490ad64fcf830b1dd7145cefe
+guid: 50c809597615e49c59a30878447dca34
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - HelloEtchASketch
+  - Chalkboy
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
