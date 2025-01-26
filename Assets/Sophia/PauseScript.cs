@@ -51,6 +51,6 @@ public class PauseScript : MonoBehaviour
     }
     public void PlayAgain()
     {
-        SceneManager.LoadScene("LevelOne");
+        SceneManager.LoadScene(Globals.currentScene);
     }
 }

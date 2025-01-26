@@ -40,7 +40,13 @@ public class BubberController : MonoBehaviour
         // jump
         bubberHeight = GetComponent<CapsuleCollider>().radius;
 
-        state = BubberState.IDLE;
+        EnterIdleState();
+
+    }
+
+    private void OnDisable()
+    {
+        EnterIdleState();
     }
 
     private void Update()

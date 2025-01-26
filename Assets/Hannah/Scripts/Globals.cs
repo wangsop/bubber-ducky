@@ -12,10 +12,12 @@ public class Globals : MonoBehaviour
     public static int numBubblesNeeded = 12;
     public static bool introOccurring = true;
     public static bool isRestart = false;
+    public static string currentScene;
 
     // Start is called before the first frame update
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene().name;
         playerStartingPosition = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
         //for now, it's wherever the player starts; we can fix this later
     }
