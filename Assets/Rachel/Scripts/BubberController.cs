@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -25,7 +24,7 @@ public class BubberController : MonoBehaviour
     [Header("Mesh")]
     [SerializeField] private Transform meshTransform;
 
-    [NonSerialized] public BubberState state;
+    private BubberState state;
     private Rigidbody rb;
 
     private void Start()
@@ -160,6 +159,18 @@ public class BubberController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         slowCount--;
+    }
+    #endregion
+
+    #region States
+    public void EnterPlayState()
+    {
+        state = BubberState.PLAY;
+    }
+
+    public void EnterIdleState()
+    {
+        state = BubberState.IDLE;
     }
     #endregion
 }
