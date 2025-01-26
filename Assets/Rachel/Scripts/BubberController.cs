@@ -45,6 +45,7 @@ public class BubberController : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(state);
         if (state == BubberState.PLAY)
         {
             CheckInput();
@@ -52,6 +53,15 @@ public class BubberController : MonoBehaviour
         }
 
         AlignMesh();
+        if (Globals.introOccurring || Globals.isRestart)
+        {
+            EnterIdleState();
+        } 
+        else
+        {
+            EnterPlayState();
+        }
+                
     }
 
     private void FixedUpdate()

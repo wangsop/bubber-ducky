@@ -27,9 +27,11 @@ public class PauseScript : MonoBehaviour
     public void Restart()
     {
         player.transform.position = Globals.playerStartingPosition;
+        Globals.introOccurring = true;
+        Globals.isRestart = true;
         Globals.percentageComplete = 0f;
         BubbleCountScript.numBubbles = 3;
-        
+
         foreach (GameObject bub in bubbles)
         {
             bub.SetActive(true);
@@ -39,11 +41,13 @@ public class PauseScript : MonoBehaviour
             obs.SetActive(true);
         }
         pauseMenu.SetActive(false);
+        
         Time.timeScale = 1f;
     }
     public void ExitToHome()
     {
-        //set scene to home screen
+        Restart();
+        SceneManager.LoadScene("Menu");
     }
     public void PlayAgain()
     {
