@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using UnityEngine;
+
+public enum BubberState { IDLE, PLAY };
 
 public class BubberController : MonoBehaviour
 {
@@ -9,6 +12,7 @@ public class BubberController : MonoBehaviour
     private float speedScale;
     private int slowCount;
     private Vector3 ogVel;
+    private float horizontalInput;
 
     [Header("Jump")]
     [SerializeField] private float jumpForce;
@@ -21,8 +25,7 @@ public class BubberController : MonoBehaviour
     [Header("Mesh")]
     [SerializeField] private Transform meshTransform;
 
-    private float horizontalInput;
-
+    [NonSerialized] public BubberState state;
     private Rigidbody rb;
 
     private void Start()
@@ -33,26 +36,35 @@ public class BubberController : MonoBehaviour
         speedScale = 1f;
         slowCount = 0;
         ogVel = Vector3.zero;
+        horizontalInput = 0f;
 
         // jump
         bubberHeight = GetComponent<CapsuleCollider>().radius;
 
-        horizontalInput = 0f;
+        state = BubberState.IDLE;
     }
 
     private void Update()
     {
-        CheckInput();
-        CapSpeed();
+        if (state == BubberState.PLAY)
+        {
+            CheckInput();
+            CapSpeed();
+        }
+
         AlignMesh();
     }
 
     private void FixedUpdate()
     {
-        Move();
-        CheckSlow();
+        if (state == BubberState.PLAY)
+        {
+            Move();
+            CheckSlow();
+            Jump();
+        }
+
         CheckGround();
-        Jump();
     }
 
     private void CheckInput()
