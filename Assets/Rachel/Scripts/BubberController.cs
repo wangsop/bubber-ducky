@@ -171,6 +171,7 @@ public class BubberController : MonoBehaviour
     public void EnterIdleState()
     {
         state = BubberState.IDLE;
+        rb.velocity = Vector3.zero;
     }
     #endregion
 }
