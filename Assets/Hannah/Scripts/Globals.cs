@@ -29,6 +29,10 @@ public class Globals : MonoBehaviour
     {
         float trackLength = currentTrack.transform.position.z + (currentTrack.GetComponent<MeshRenderer>().bounds.size.z / 2);
         percentageComplete = (player.transform.position.z - playerStartingPosition.z) / (trackLength - playerStartingPosition.z);
+        if (player.transform.position.y < -40)
+        {
+            lose();
+        }
     }
 
     public static void win()
