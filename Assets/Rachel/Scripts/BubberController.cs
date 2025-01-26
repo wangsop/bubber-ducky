@@ -45,7 +45,6 @@ public class BubberController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(state);
         if (state == BubberState.PLAY)
         {
             CheckInput();
