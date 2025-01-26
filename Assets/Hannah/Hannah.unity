@@ -2026,6 +2026,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 987918375846846450, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e079bd995ffb481aa09c3eacf23688d, type: 2}
+    - target: {fileID: 987918375846846450, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -795681243816805486, guid: 7e079bd995ffb481aa09c3eacf23688d, type: 2}
+    - target: {fileID: 987918375846846450, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1979805531413764680, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2033,6 +2045,26 @@ PrefabInstance:
     - target: {fileID: 2877750258544595993, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
       propertyPath: m_Name
       value: UI Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2927468289047147624, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e079bd995ffb481aa09c3eacf23688d, type: 2}
+    - target: {fileID: 2927468289047147624, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -795681243816805486, guid: 7e079bd995ffb481aa09c3eacf23688d, type: 2}
+    - target: {fileID: 2927468289047147624, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192637586443944210, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 152.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192637586443944210, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 14.3
       objectReference: {fileID: 0}
     - target: {fileID: 4842858886545470976, guid: 37d1680bbb1fb44b1bdde66c3db5a9c1, type: 3}
       propertyPath: m_Pivot.x
