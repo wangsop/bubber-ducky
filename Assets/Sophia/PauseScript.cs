@@ -47,6 +47,7 @@ public class PauseScript : MonoBehaviour
         player.transform.position = Globals.playerStartingPosition;
         Globals.introOccurring = true;
         Globals.isRestart = true;
+        player.GetComponent<BubberController>().EnterIdleState();
         levelAudio.Stop();
         Globals.percentageComplete = 0f;
         BubbleCountScript.numBubbles = 3;
